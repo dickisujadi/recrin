@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.Header {
+  position: relative;
+  background-color: cornflowerblue;
+  width: 100vw;
+  height: 100px;
+  min-height: 5rem;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.Header-menu {
+  margin-left: 5rem;
+  bottom: 1rem;
+  position: absolute;
+  color: cornsilk;
+}
