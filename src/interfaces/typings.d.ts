@@ -114,3 +114,11 @@ export interface RepositoryTable {
     forks_count: number,
     stargazers_count: number,
 }
+
+export interface Code {
+    id: string,
+    name: string,
+    owner_name: string,
+    git_url: string,
+    deployment_url: string,
+}

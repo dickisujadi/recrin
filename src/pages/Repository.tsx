@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { GridColDef } from '@mui/x-data-grid';
-import { Repository, RepositoryTable } from "../interfaces/Repositories";
+import { Repository, RepositoryTable } from "../interfaces/typings";
 import DataGridUi from '../ui/DataGrid';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 100 },
-  { field: 'username', headerName: 'User Name', width: 130 },
+  { field: 'id', headerName: 'ID', width: 200 },
+  { field: 'username', headerName: 'User Name', width: 260 },
   { field: 'name', headerName: 'Repository Name', width: 260 },
   {
     field: 'watchers_count',
@@ -55,13 +55,7 @@ export default function RepositoryPages() {
   }, [])
   return (
     <>
-      <div style={{ height: '65vh', width: '50vw', margin: 'auto'}}>
-        {/* <DataGrid
-          rows={repositories}
-          columns={columns}
-          pageSize={10}
-          rowsPerPageOptions={[10]}
-        /> */}
+      <div className='Table-container'>
         <DataGridUi columns={columns} pageSize={10} rows={repositories} key={'repository'}/>
       </div>
     </>

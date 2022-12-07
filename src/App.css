@@ -53,3 +53,19 @@
   position: absolute;
   color: cornsilk;
 }
+
+.Table-container {
+  height: 65vh;
+  width: auto;
+  margin: 1rem 5rem;
+}
+
+.Menu-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 4rem;
+}
+
+.Menu-item {
+  margin: 0 1rem;
+}
