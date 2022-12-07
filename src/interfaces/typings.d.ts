@@ -117,8 +117,8 @@ export interface RepositoryTable {
 
 export interface Code {
     id: string,
-    name: string,
     owner_name: string,
+    repo_name: string,
     git_url: string,
     deployment_url: string,
 }
