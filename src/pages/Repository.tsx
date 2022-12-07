@@ -47,6 +47,7 @@ export default function RepositoryPages() {
       })
       setRepositories(res);
     })
+    .catch(error => console.log(error))
   }
 
 

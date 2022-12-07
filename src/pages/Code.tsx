@@ -29,6 +29,7 @@ export default function CodePage() {
       })
       setCodes(res);
     })
+    .catch(error => console.log(error))
   }
 
 

@@ -19,8 +19,6 @@ export default function CommitPage() {
     .then(response => response.json())
     .then(response => response.items)
     .then(response => {
-      console.log(response);
-      
       const res : Commit[] = response.map((item : any, index : number) => {
         return {
           id: index,
@@ -32,6 +30,7 @@ export default function CommitPage() {
       })
       setCommit(res);
     })
+    .catch(error => console.log(error))
   }
 
 
