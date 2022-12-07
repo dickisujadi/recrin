@@ -1,7 +1,8 @@
 import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import CodePages from './Code';
+import CodePage from './Code';
+import CommitPage from './Commit';
 import Repository from './Repository';
 
 interface Menu {
@@ -12,13 +13,17 @@ interface Menu {
 export default function Dashboard() {
   const menus: Menu[] = [
     {
+      name: 'Codes',
+      component: <CodePage />
+    },
+    {
+      name: 'Commits',
+      component: <CommitPage />
+    },
+    {
       name: 'Repositories',
       component: <Repository />
     },
-    {
-      name: 'Codes',
-      component: <CodePages />
-    }
   ]
 
   const [menu, setMenu] = useState<Menu>(menus[0])

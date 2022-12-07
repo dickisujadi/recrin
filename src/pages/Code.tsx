@@ -7,11 +7,10 @@ const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 200 },
   { field: 'name', headerName: 'Name', width: 260 },
   { field: 'owner_name', headerName: 'Owner Name', width: 200 },
-  { field: 'git_url', headerName: 'Git URL', width: 400 },
-  { field: 'deployment_url', headerName: 'Deployment URL', width: 400 },
+  { field: 'git_url', headerName: 'Git URL', width: 800 },
 ];
 
-export default function CodePages() {
+export default function CodePage() {
   const [codes, setCodes] = useState<Code[]>([]);
 
   const fetchCodes = () => {
@@ -19,7 +18,6 @@ export default function CodePages() {
     .then(response => response.json())
     .then(response => response.items)
     .then(response => {
-      console.log('resp', response)
       const res : Code[] = response.map((item : any, index : number) => {
         return {
             id: `${item.repository.id}${index}`,
@@ -29,7 +27,6 @@ export default function CodePages() {
             deployment_url: item.deployments_url,
         }
       })
-      console.log('res', res)
       setCodes(res);
     })
   }

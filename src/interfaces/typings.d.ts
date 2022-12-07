@@ -122,3 +122,11 @@ export interface Code {
     git_url: string,
     deployment_url: string,
 }
+
+export interface Commit {
+    id: string,
+    repo_name: string,
+    author_name: string,
+    commiter: string,
+    message: string,
+}
